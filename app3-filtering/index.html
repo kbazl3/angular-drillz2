@@ -1,0 +1,16 @@
+<html ng-app="drill3">
+	<body ng-controller="filterCtrl">
+		<input ng-model="searchTerm.name" placeholder="name">
+		<input ng-model="searchTerm.email" placeholder="email">
+		<input ng-model="searchTerm.phone" placeholder="phone#">
+		<div ng-repeat="person in contactInfo | filter: searchTerm">
+
+			<p>{{person.name}}----{{person.email}}-----{{person.phone}} </p>
+
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+		<script src="app.js"></script>
+		<script src="controller.js"></script>
+		<script src="service.js"></script>
+	</body>
+</html>
